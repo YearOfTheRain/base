@@ -18,27 +18,22 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 全局异常处理器
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
 @RestControllerAdvice
-public class GlobalExceptionHandler
-{
+public class GlobalExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     /**
      * 权限校验失败 如果请求为ajax返回json，普通请求跳转页面
      */
     @ExceptionHandler(AuthorizationException.class)
-    public Object handleAuthorizationException(HttpServletRequest request, AuthorizationException e)
-    {
+    public Object handleAuthorizationException(HttpServletRequest request, AuthorizationException e) {
         log.error(e.getMessage(), e);
-        if (ServletUtils.isAjaxRequest(request))
-        {
+        if (ServletUtils.isAjaxRequest(request)) {
             return AjaxResult.error(PermissionUtils.getMsg(e.getMessage()));
-        }
-        else
-        {
+        } else {
             ModelAndView modelAndView = new ModelAndView();
             modelAndView.setViewName("error/unauth");
             return modelAndView;
@@ -48,9 +43,8 @@ public class GlobalExceptionHandler
     /**
      * 请求方式不支持
      */
-    @ExceptionHandler({ HttpRequestMethodNotSupportedException.class })
-    public AjaxResult handleException(HttpRequestMethodNotSupportedException e)
-    {
+    @ExceptionHandler({HttpRequestMethodNotSupportedException.class})
+    public AjaxResult handleException(HttpRequestMethodNotSupportedException e) {
         log.error(e.getMessage(), e);
         return AjaxResult.error("不支持' " + e.getMethod() + "'请求");
     }
@@ -59,8 +53,7 @@ public class GlobalExceptionHandler
      * 拦截未知的运行时异常
      */
     @ExceptionHandler(RuntimeException.class)
-    public AjaxResult notFount(RuntimeException e)
-    {
+    public AjaxResult notFount(RuntimeException e) {
         log.error("运行时异常:", e);
         return AjaxResult.error("运行时异常:" + e.getMessage());
     }
@@ -69,8 +62,7 @@ public class GlobalExceptionHandler
      * 系统异常
      */
     @ExceptionHandler(Exception.class)
-    public AjaxResult handleException(Exception e)
-    {
+    public AjaxResult handleException(Exception e) {
         log.error(e.getMessage(), e);
         return AjaxResult.error("服务器错误，请联系管理员");
     }
@@ -79,15 +71,11 @@ public class GlobalExceptionHandler
      * 业务异常
      */
     @ExceptionHandler(BusinessException.class)
-    public Object businessException(HttpServletRequest request, BusinessException e)
-    {
+    public Object businessException(HttpServletRequest request, BusinessException e) {
         log.error(e.getMessage(), e);
-        if (ServletUtils.isAjaxRequest(request))
-        {
+        if (ServletUtils.isAjaxRequest(request)) {
             return AjaxResult.error(e.getMessage());
-        }
-        else
-        {
+        } else {
             ModelAndView modelAndView = new ModelAndView();
             modelAndView.addObject("errorMessage", e.getMessage());
             modelAndView.setViewName("error/business");
@@ -99,8 +87,7 @@ public class GlobalExceptionHandler
      * 自定义验证异常
      */
     @ExceptionHandler(BindException.class)
-    public AjaxResult validatedBindException(BindException e)
-    {
+    public AjaxResult validatedBindException(BindException e) {
         log.error(e.getMessage(), e);
         String message = e.getAllErrors().get(0).getDefaultMessage();
         return AjaxResult.error(message);
@@ -110,8 +97,7 @@ public class GlobalExceptionHandler
      * 演示模式异常
      */
     @ExceptionHandler(DemoModeException.class)
-    public AjaxResult demoModeException(DemoModeException e)
-    {
+    public AjaxResult demoModeException(DemoModeException e) {
         return AjaxResult.error("演示模式，不允许操作");
     }
 }

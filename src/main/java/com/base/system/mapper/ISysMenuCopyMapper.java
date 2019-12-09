@@ -12,7 +12,5 @@ import org.springframework.stereotype.Repository;
  * @description xxx
  * @date 2019-12-07 16:10
  */
-@Repository
-@Mapper
 public interface ISysMenuCopyMapper extends BaseMapper<TestTable> {
 }

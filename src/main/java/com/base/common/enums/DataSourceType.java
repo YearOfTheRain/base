@@ -2,11 +2,10 @@ package com.base.common.enums;
 
 /**
  * 数据源
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
-public enum DataSourceType
-{
+public enum DataSourceType {
     /**
      * 主库
      */

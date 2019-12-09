@@ -2,11 +2,10 @@ package com.base.common.constant;
 
 /**
  * 通用常量信息
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
-public class Constants
-{
+public class Constants {
     /**
      * UTF-8 字符集
      */

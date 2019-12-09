@@ -10,19 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 服务器监控
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
 @Controller
 @RequestMapping("/monitor/server")
-public class ServerController extends BaseController
-{
+public class ServerController extends BaseController {
     private String prefix = "monitor/server";
 
     @RequiresPermissions("monitor:server:view")
     @GetMapping()
-    public String server(ModelMap mmap) throws Exception
-    {
+    public String server(ModelMap mmap) throws Exception {
         Server server = new Server();
         server.copyTo();
         mmap.put("server", server);

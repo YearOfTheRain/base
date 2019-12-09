@@ -2,11 +2,10 @@ package com.base.common.constant;
 
 /**
  * Shiro通用常量
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
-public interface ShiroConstants
-{
+public interface ShiroConstants {
     /**
      * 当前登录的用户
      */

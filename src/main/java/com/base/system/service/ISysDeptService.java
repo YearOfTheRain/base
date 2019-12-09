@@ -8,14 +8,13 @@ import java.util.List;
 
 /**
  * 部门管理 服务层
- * 
- * @author ruoyi
+ *
+ * @author administrator
  */
-public interface ISysDeptService
-{
+public interface ISysDeptService {
     /**
      * 查询部门管理数据
-     * 
+     *
      * @param dept 部门信息
      * @return 部门信息集合
      */
@@ -23,7 +22,7 @@ public interface ISysDeptService
 
     /**
      * 查询部门管理树
-     * 
+     *
      * @param dept 部门信息
      * @return 所有部门信息
      */
@@ -39,7 +38,7 @@ public interface ISysDeptService
 
     /**
      * 查询部门人数
-     * 
+     *
      * @param parentId 父部门ID
      * @return 结果
      */
@@ -47,7 +46,7 @@ public interface ISysDeptService
 
     /**
      * 查询部门是否存在用户
-     * 
+     *
      * @param deptId 部门ID
      * @return 结果 true 存在 false 不存在
      */
@@ -55,7 +54,7 @@ public interface ISysDeptService
 
     /**
      * 删除部门管理信息
-     * 
+     *
      * @param deptId 部门ID
      * @return 结果
      */
@@ -63,7 +62,7 @@ public interface ISysDeptService
 
     /**
      * 新增保存部门信息
-     * 
+     *
      * @param dept 部门信息
      * @return 结果
      */
@@ -71,7 +70,7 @@ public interface ISysDeptService
 
     /**
      * 修改保存部门信息
-     * 
+     *
      * @param dept 部门信息
      * @return 结果
      */
@@ -79,7 +78,7 @@ public interface ISysDeptService
 
     /**
      * 根据部门ID查询信息
-     * 
+     *
      * @param deptId 部门ID
      * @return 部门信息
      */
@@ -87,7 +86,7 @@ public interface ISysDeptService
 
     /**
      * 校验部门名称是否唯一
-     * 
+     *
      * @param dept 部门信息
      * @return 结果
      */

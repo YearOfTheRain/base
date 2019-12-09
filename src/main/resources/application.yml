@@ -1,7 +1,7 @@
 # 项目相关配置
-ruoyi:
+base:
   # 名称
-  name: RuoYi
+  name: Base
   # 版本
   version: 4.1.0
   # 版权年份
@@ -72,12 +72,12 @@ spring:
 
 # MyBatis
 mybatis:
-    # 搜索指定包别名
-    typeAliasesPackage: com.base.**.domain,com.base.**.model
-    # 配置mapper的扫描，找到所有的mapper.xml映射文件
-    mapperLocations: classpath*:mapper/**/*Mapper.xml
-    # 加载全局的配置文件
-    configLocation: classpath:mybatis/mybatis-config.xml
+  # 搜索指定包别名
+  typeAliasesPackage: com.base.**.domain,com.base.**.model
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
 
 # PageHelper分页插件
 pagehelper: 
