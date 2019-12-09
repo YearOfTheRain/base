@@ -1,4 +1,4 @@
-package com.base.web.controller.tool;
+package com.base.api.tool;
 
 import com.base.common.core.controller.BaseController;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/tool/swagger")
 public class SwaggerController extends BaseController {
-    @RequiresPermissions("tool:swagger:view")
+
+//    @RequiresPermissions("tool:swagger:view")
     @GetMapping()
     public String index() {
         return redirect("/swagger-ui.html");

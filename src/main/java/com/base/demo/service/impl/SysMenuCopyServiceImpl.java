@@ -1,9 +1,9 @@
-package com.base.system.service.impl;
+package com.base.demo.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.base.system.domain.TestTable;
-import com.base.system.mapper.ISysMenuCopyMapper;
-import com.base.system.service.ISysMenuCopyService;
+import com.base.demo.model.TestTable;
+import com.base.demo.mapper.ISysMenuCopyMapper;
+import com.base.demo.service.ISysMenuCopyService;
 import org.springframework.stereotype.Service;
 
 /**

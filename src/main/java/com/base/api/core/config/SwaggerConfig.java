@@ -1,4 +1,4 @@
-package com.base.web.core.config;
+package com.base.api.core.config;
 
 import com.base.common.config.Global;
 import io.swagger.annotations.ApiOperation;

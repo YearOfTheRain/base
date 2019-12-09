@@ -1,4 +1,4 @@
-package com.base.web.controller.tool;
+package com.base.api.tool;
 
 import com.base.common.core.controller.BaseController;
 import com.base.common.core.domain.AjaxResult;

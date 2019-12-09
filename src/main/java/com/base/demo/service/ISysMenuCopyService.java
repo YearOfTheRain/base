@@ -1,7 +1,7 @@
-package com.base.system.service;
+package com.base.demo.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.base.system.domain.TestTable;
+import com.base.demo.model.TestTable;
 
 /**
  * @author Shulin Li
